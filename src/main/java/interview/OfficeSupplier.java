@@ -43,5 +43,4 @@ public class OfficeSupplier {
         // TODO
         return "";
     }
-    
 }
