@@ -5,7 +5,7 @@ public class OfficeSupplier {
     /*
      * The shredFirstCharacter() method takes a String s and returns a new String.
      * The resulting String should not include the first character of the original.
-     *   - ex: "Skibidi" -> "kibidi"
+     *   - ex: "xSt. Saviour" -> "St. Saviour"
      */
     public static String shredFirstCharacter(String s) {
         // TODO
@@ -16,7 +16,7 @@ public class OfficeSupplier {
     /*
      * The shredLastCharacter() method takes a String s and returns a new String.
      * The resulting String should not include the last character of the original.
-     *   - ex: "Skibidi" -> "Skibid"
+     *   - ex: "St. Saviourx" -> "St. Saviour"
      */
     public static String shredLastCharacter(String s) {
         // TODO
