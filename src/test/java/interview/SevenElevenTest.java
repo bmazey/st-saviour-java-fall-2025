@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 public class SevenElevenTest {
 
     @Test
-    public static void testShop() {
+    public void testShop() {
         // Should get a blank string when not a multiple of 7 or 11.
         assert SevenEleven.shop(3) == "";
         assert SevenEleven.shop(5) == "";
