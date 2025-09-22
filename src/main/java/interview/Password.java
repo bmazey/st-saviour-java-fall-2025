@@ -1,5 +1,6 @@
 package interview;
 
+import java.io.Console;
 import java.util.Random;
 
 public class Password {
@@ -22,6 +23,22 @@ public class Password {
 
         Random random = new Random();
 
-        return "";
-    }
+        // generatePassword();
+
+        // string letters = java.util.Random();
+        // char symbols = 
+        // int number = new Random();
+        // string num = "1 2 3 4 5 6 7 8 9 10 11 12 ";
+
+        // int length = num.Length;
+
+        // Console.WriteLine($"A twelve sided die has the numbers {num}");
+
+        // Random generator = new Random(DateTime.Now.Millisecond);
+
+        // int letterIndex = generator.Next(length);
+
+        // Console.WriteLine( + num[letterIndex]);
+
+        return "";    }
 }
