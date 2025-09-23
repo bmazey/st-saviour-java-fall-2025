@@ -11,6 +11,15 @@ public class SevenEleven {
      */
     public static String shop(int price) {
         // TODO
+        if (price%7==0){
+            return "seven";
+        }
+        if (price%11==0){
+            return "eleven";
+        }
+        if (price%7==0) and (price%11==0){
+            return "seveneleven";
+        }
         return "";
     }
 }
