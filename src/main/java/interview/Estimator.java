@@ -15,15 +15,9 @@ public class Estimator {
         if (decimal >= 0.5) {
             return (int)d + 1;
         }
-        if (decimal <= 0.5) {
-            return (int)d;
-        }
-        if (decimal >= -0.5) {
+        if (decimal <= -0.5) {
             return (int)d - 1;
         }
-        if (decimal <= -0.5) {
-            return (int)d + 1;
-        }
-        return 0;
+        return (int)d;
     }
 }
