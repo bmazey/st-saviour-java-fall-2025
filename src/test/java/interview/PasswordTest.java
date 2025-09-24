@@ -24,8 +24,8 @@ public class PasswordTest {
         String password = Password.generatePassword();
 
         assert Character.isLetter(password.charAt(0));
-        assert Character.isDigit(password.charAt(0));
-        assert Character.isLetterOrDigit(password.charAt(9));
+        assert Character.isDigit(password.charAt(5));
+        assert Character.isLetterOrDigit(password.charAt(0));
 
     }
 
