@@ -11,6 +11,19 @@ public class SevenEleven {
      */
     public static String shop(int price) {
         // TODO
+        /* is it good for both 7 and 11? */
+        if (price%7==0 && price%11==0){
+            return "seveneleven";
+        }
+        /* good for 7? */
+        if (price%7==0){
+            return "seven";
+        }
+        /* good for 11? */
+        if (price%11==0){
+            return "eleven";
+        }
+        /* get out of my house otherwise */
         return "";
     }
 }
