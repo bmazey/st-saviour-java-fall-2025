@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="interview.OfficeSupplierTest" time="0.004" tests="2" errors="0" skipped="0" failures="2">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="interview.OfficeSupplierTest" time="0.001" tests="2" errors="0" skipped="0" failures="2">
   <properties>
     <property name="java.specification.version" value="17"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="US"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-17-openjdk-amd64/lib"/>
-    <property name="sun.java.command" value="/home/flowers_chaos/the fear/st-saviour-java-fall-2025/target/surefire/surefirebooter1159152838018706523.jar /home/flowers_chaos/the fear/st-saviour-java-fall-2025/target/surefire 2025-09-23T09-29-10_612-jvmRun1 surefire11399610106111956810tmp surefire_012292555362681210417tmp"/>
+    <property name="sun.java.command" value="/home/flowers_chaos/the fear/st-saviour-java-fall-2025/target/surefire/surefirebooter6781323307752785389.jar /home/flowers_chaos/the fear/st-saviour-java-fall-2025/target/surefire 2025-09-24T10-37-26_376-jvmRun1 surefire10597561738597415835tmp surefire_06743717886203853716tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/flowers_chaos/the fear/st-saviour-java-fall-2025/target/test-classes:/home/flowers_chaos/the fear/st-saviour-java-fall-2025/target/classes:/home/flowers_chaos/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.10.0/junit-jupiter-engine-5.10.0.jar:/home/flowers_chaos/.m2/repository/org/junit/platform/junit-platform-engine/1.10.0/junit-platform-engine-1.10.0.jar:/home/flowers_chaos/.m2/repository/org/opentest4j/opentest4j/1.3.0/opentest4j-1.3.0.jar:/home/flowers_chaos/.m2/repository/org/junit/platform/junit-platform-commons/1.10.0/junit-platform-commons-1.10.0.jar:/home/flowers_chaos/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.10.0/junit-jupiter-api-5.10.0.jar:/home/flowers_chaos/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/flowers_chaos/.m2/repository/org/json/json/20231013/json-20231013.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -27,7 +27,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="/home/flowers_chaos/the fear/st-saviour-java-fall-2025/target/surefire/surefirebooter1159152838018706523.jar"/>
+    <property name="surefire.real.class.path" value="/home/flowers_chaos/the fear/st-saviour-java-fall-2025/target/surefire/surefirebooter6781323307752785389.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="17.0.16+8-Debian-1deb12u1"/>
     <property name="user.name" value="flowers_chaos"/>
@@ -53,12 +53,12 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="61.0"/>
   </properties>
-  <testcase name="testOfficeStapler" classname="interview.OfficeSupplierTest" time="0.003">
+  <testcase name="testOfficeStapler" classname="interview.OfficeSupplierTest" time="0.001">
     <failure type="java.lang.AssertionError">java.lang.AssertionError
 	at interview.OfficeSupplierTest.testOfficeStapler(OfficeSupplierTest.java:18)
 </failure>
   </testcase>
-  <testcase name="testOfficeShredder" classname="interview.OfficeSupplierTest" time="0.001">
+  <testcase name="testOfficeShredder" classname="interview.OfficeSupplierTest" time="0">
     <failure type="java.lang.AssertionError">java.lang.AssertionError
 	at interview.OfficeSupplierTest.testOfficeShredder(OfficeSupplierTest.java:9)
 </failure>
