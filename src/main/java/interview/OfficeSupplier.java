@@ -41,6 +41,6 @@ public class OfficeSupplier {
      */
     public static String stapleToEnd(String s, char c) {
         // TODO
-        return s+c;
+        return s + c;
     }
 }
