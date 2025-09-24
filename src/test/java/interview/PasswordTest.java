@@ -26,13 +26,17 @@ public class PasswordTest {
     @Test
     public void testPasswordLength() {
         // TODO Ensure that generated password is of length 10.
-        assert true;
+        String password = Password.generatePassword();
+        assert password.length() == 10;
     }
 
     @Test
     public void testPasswordUnique() {
         // TODO Create two passwords and ensure that they do not equal each other.
         // NOTE We overlook collisions for the purpose of this exercise.
-        assert true;
+        String pass1 = Password.generatePassword();
+        String pass2 = Password.generatePassword();
+
+        assert ! pass1.equals(pass2);
     }
 }
