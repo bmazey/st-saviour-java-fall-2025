@@ -20,7 +20,13 @@ public class PasswordTest {
         // HINT Java's Character class has rich support for classifying unicode symbols.
         // https://docs.oracle.com/javase/8/docs/api/java/lang/Character.html#isLetter-char-
         // https://docs.oracle.com/javase/8/docs/api/java/lang/Character.html#isDigit-char-
-        assert true;
+        
+        String password = Password.generatePassword();
+
+        assert Character.isLetter(password.charAt(0));
+        assert Character.isDigit(password.charAt(0));
+        assert Character.isLetterOrDigit(password.charAt(9));
+
     }
 
     @Test
