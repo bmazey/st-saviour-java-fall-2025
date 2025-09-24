@@ -27,6 +27,7 @@ public class Password {
         String numbers = "0123456789";
         String symbols = "!@#$%^&*";
 
+        /* this is literally just "choose a random one for the list" ten times over changed to fit each list lol */
         int l = random.nextInt(letters.length());
         password += letters.charAt(l);
         l = random.nextInt(letters.length());
