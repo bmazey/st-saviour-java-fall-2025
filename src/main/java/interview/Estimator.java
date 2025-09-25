@@ -10,8 +10,8 @@ public class Estimator {
      *  - ex: -3.6 -> -4
      */
     public static int round(double d) {
-        // TODO
-
+        
+        // round up
         double remainder = d-(int)d;
             if (remainder >= 0.5) {
                 return (int)d+1;

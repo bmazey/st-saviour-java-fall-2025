@@ -8,39 +8,38 @@ public class OfficeSupplier {
      *   - ex: "xSt. Saviour" -> "St. Saviour"
      */
     public static String shredFirstCharacter(String s) {
-        // TODO
-        // HINT https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#substring-int-
-       
+              
         String x = s.substring (1,s.length());
 
         return x; 
     
-    }
+    } // removes first letter of string using shredFirstCharacter
 
     /*
      * The shredLastCharacter() method takes a String s and returns a new String.
      * The resulting String should not include the last character of the original.
      *   - ex: "St. Saviourx" -> "St. Saviour"
      */
-    public static String shredLastCharacter(String s) {
+    
+     public static String shredLastCharacter(String s) {
         // TODO
         // HINT https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#substring-int-
         
         String x = s.substring(0, s.length()-1);
 
         return x;
-    }
+    } // removes last letter of string by taking last character away 
 
     /*
      * The stapleToBeginning() method takes a String s, a char c, and returns a new String.
      * The resulting String should have the character added to the front of the original
      *   - ex: "ey can I pull you for a chat?", 'H' -> "Hey can I pull you for a chat?"
      */
-    public static String stapleToBeginning(String s, char c) {
-        // TODO
+    
+     public static String stapleToBeginning(String s, char c) {
 
         return c + s;
-    }
+    } // adds a character to the beginning of the phrase by using the string to attach the letter __ to char into the string __
 
     /*
      * The stapleToEnd() method takes a String s, a char c, and returns a new String.
@@ -50,5 +49,5 @@ public class OfficeSupplier {
     public static String stapleToEnd(String s, char c) {
         // TODO
         return s + c;
-    }
+    } // adds a character to the end of the phrase by using stapleToEnd to attach the letter __ to char to the string __
 }
