@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 public class OfficeSupplierTest {
     
     @Test
-    public static void testOfficeShredder() {
+    public void testOfficeShredder() {
         assert OfficeSupplier.shredFirstCharacter("Michael").equals("ichael");
         assert OfficeSupplier.shredFirstCharacter("Pam").equals("am");
 

@@ -10,7 +10,9 @@ public class OfficeSupplier {
     public static String shredFirstCharacter(String s) {
         // TODO
         // HINT https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#substring-int-
-        return "";
+        int l = s.length();
+        String c = s.substring(l);
+        return c;
     }
 
     /*
@@ -19,9 +21,11 @@ public class OfficeSupplier {
      *   - ex: "St. Saviourx" -> "St. Saviour"
      */
     public static String shredLastCharacter(String s) {
+        int l = s.length();
+        String c = s.substring(0, l - 1);
+        return c;
         // TODO
         // HINT https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#substring-int-
-        return "";
     }
 
     /*
@@ -30,8 +34,7 @@ public class OfficeSupplier {
      *   - ex: "ey can I pull you for a chat?", 'H' -> "Hey can I pull you for a chat?"
      */
     public static String stapleToBeginning(String s, char c) {
-        // TODO
-        return "";
+        
     }
 
     /*
@@ -40,7 +43,11 @@ public class OfficeSupplier {
      *   - ex: "Hey can I pull you for a cha?", 't' -> "Hey can I pull you for a chat?"
      */
     public static String stapleToEnd(String s, char c) {
+        if (s == null || s.isEmpty()) {
+            return Character.toString(c);
+        }
+        String result = s + c;
+        return result;
         // TODO
-        return "";
     }
 }
