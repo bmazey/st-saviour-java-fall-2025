@@ -38,7 +38,7 @@ public class OfficeSupplier {
     public static String stapleToBeginning(String s, char c) {
         // TODO
         
-        return c+s;
+        return c + s;
     }
 
     /*
@@ -49,6 +49,6 @@ public class OfficeSupplier {
     public static String stapleToEnd(String s, char c) {
         // TODO
         
-        return s+c;
+        return s + c;
     }
 }
