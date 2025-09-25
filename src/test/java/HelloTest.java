@@ -7,3 +7,7 @@ public class HelloTest {
         assert true;
     }
 }
+    //  String password = Password.genratePassword();
+
+    //  assert Charecter.isLetter(password.charAt(index:0))
+     
