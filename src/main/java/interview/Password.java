@@ -22,13 +22,26 @@ public class Password {
 
         
         Random random = new Random();
-        array letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String digits = "0123456789";
+        String symbols = "!@#$%^&*"; 
+
         
         String password = "";
         int r = random.nextInt(letters.length());
         password += letters.charAt(r);
 
 
-        return "";
+        // Do above 4 more times ...
+
+        r = random.nextInt(digits.length());
+        password += digits.charAt(r);
+
+        // Do above 3 more times ...
+
+        // TODO add one symbol
+
+
+        return password;
     }
 }

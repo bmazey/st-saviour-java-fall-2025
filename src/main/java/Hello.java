@@ -1,10 +1,10 @@
-import java.util.Random;
+//import java.util.Random;
 
 class Hello {
     public static void main(String[] args) {
         System.out.println("new dawn, new day!");
         // Hello!
-        //Concatenatio in Java
+        //Concatenation in Java
         //string s = "Sept";
         //string e = "ember";
         //System.out.println(s + e);
@@ -30,5 +30,7 @@ class Hello {
         //Java does not create an entirely new memory address for c. 
         //Instead it decides that c refers to s. This is more space effective.
         //This is called string interning.
+        //use .equals() to compare values of strings in the password test
+
     }
 }
