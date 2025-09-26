@@ -24,15 +24,27 @@ public class PasswordTest {
         String password = Password.generatePassword();
 
         assert Character.isLetter(password.charAt(0));
+        assert Character.isLetter(password.charAt(1));
+        assert Character.isLetter(password.charAt(2));
+        assert Character.isLetter(password.charAt(3));
+        assert Character.isLetter(password.charAt(4));
+        
         assert Character.isDigit(password.charAt(5));
-        assert Character.isLetterOrDigit(password.charAt(0));
-
+        assert Character.isDigit(password.charAt(6));
+        assert Character.isDigit(password.charAt(7));
+        assert Character.isDigit(password.charAt(8));
+        
+        assert !Character.isLetterOrDigit(password.charAt(9));
     }
 
     @Test
     public void testPasswordLength() {
         // TODO Ensure that generated password is of length 10.
         assert true;
+
+        String password = Password.generatePassword();
+
+        assert password.length() == 10;
     }
 
     @Test
@@ -40,5 +52,11 @@ public class PasswordTest {
         // TODO Create two passwords and ensure that they do not equal each other.
         // NOTE We overlook collisions for the purpose of this exercise.
         assert true;
+
+        String firstPassword = Password.generatePassword();
+        String secondPassword = Password.generatePassword();
+        assert !firstPassword.equals(secondPassword);
+
+        
     }
 }
