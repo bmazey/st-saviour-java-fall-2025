@@ -1,5 +1,6 @@
 package interview;
 
+import java.io.Console;
 import java.util.Random;
 
 public class Password {
@@ -22,6 +23,53 @@ public class Password {
 
         Random random = new Random();
 
-        return "";
+        String letters = "abcdefghijklmnopqrstuvwxyz";
+        String digits = "0123456789";
+        String symbols = "!@#$%^&*";
+
+        String password = "";
+        
+        // 5 Letters:
+        int r = random.nextInt(letters.length());
+        password += letters.charAt(r);
+        r = random.nextInt(letters.length());
+        password += letters.charAt(r);
+        r = random.nextInt(letters.length());
+        password += letters.charAt(r);
+        r = random.nextInt(letters.length());
+        password += letters.charAt(r);
+        r = random.nextInt(letters.length());
+        password += letters.charAt(r);
+
+        //4 Digits:
+        r = random.nextInt(digits.length());
+        password += digits.charAt(r);
+        r = random.nextInt(digits.length());
+        password += digits.charAt(r);
+        r = random.nextInt(digits.length());
+        password += digits.charAt(r);
+        r = random.nextInt(digits.length());
+        password += digits.charAt(r);        
+
+        //1 Symbol:
+        r = random.nextInt(symbols.length());
+        password += symbols.charAt(r);
+
+        return password;  
+
+        // System.out.println("The random number is: " + r);
+        // System.out.println("The random letter is: " + s.charAt(r));
+        // generatePassword();
+        // string letters = java.util.Random();
+        // char symbols = 
+        // int number = new Random();
+        // string num = "1 2 3 4 5 6 7 8 9 10 11 12 ";
+        // int length = num.Length;
+        // Console.WriteLine($"A twelve sided die has the numbers {num}");
+        // Random generator = new Random(DateTime.Now.Millisecond);
+        // int letterIndex = generator.Next(length);
+        // Console.WriteLine( + num[letterIndex]);
+
+          
     }
 }
