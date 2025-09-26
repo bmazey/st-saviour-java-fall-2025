@@ -25,22 +25,31 @@ public class Password {
         String letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
         String digits = "0123456789";
         String symbols = "!@#$%^&*"; 
-
         
         String password = "";
+    
         int r = random.nextInt(letters.length());
         password += letters.charAt(r);
-
-
-        // Do above 4 more times ...
+        r = random.nextInt(letters.length());
+        password += letters.charAt(r);
+        r = random.nextInt(letters.length());
+        password += letters.charAt(r);
+        r = random.nextInt(letters.length());
+        password += letters.charAt(r);
+        r = random.nextInt(letters.length());
+        password += letters.charAt(r);
 
         r = random.nextInt(digits.length());
         password += digits.charAt(r);
+        r = random.nextInt(digits.length());
+        password += digits.charAt(r);
+        r = random.nextInt(digits.length());
+        password += digits.charAt(r);
+        r = random.nextInt(digits.length());
+        password += digits.charAt(r);
 
-        // Do above 3 more times ...
-
-        // TODO add one symbol
-
+        r = random.nextInt(symbols.length());
+        password += symbols.charAt(r);
 
         return password;
     }
