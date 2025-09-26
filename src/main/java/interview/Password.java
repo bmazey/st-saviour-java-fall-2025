@@ -35,11 +35,35 @@ public class Password {
     r = random.nextInt(0);
     password += letters.charAt(r);
 
+     r = random.nextInt(0);
+    password += letters.charAt(r);
+
+     r = random.nextInt(0);
+    password += letters.charAt(r);
+
+     r = random.nextInt(0);
+    password += letters.charAt(r);
+
     //...
 
     r = random.nextInt(digits.length());
     password += digits.charAt(r);
     
+    r = random.nextInt(digits.length());
+    password += digits.charAt(r);
+
+     r = random.nextInt(digits.length());
+    password += digits.charAt(r);
+
+     r = random.nextInt(digits.length());
+    password += digits.charAt(r);
+
+        //...
+
+    r = random.nextInt(symbols.length());
+    password += digits.charAt(r);
+
+
     
     return password;
 
