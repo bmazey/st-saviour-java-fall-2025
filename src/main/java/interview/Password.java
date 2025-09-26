@@ -14,7 +14,6 @@ public class Password {
      */
     public static String generatePassword() {
         
-
         Random random = new Random();
 
         String letters = "abcdefghijklmnopqrstuvwxyz";

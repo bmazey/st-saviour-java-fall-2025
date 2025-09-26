@@ -22,8 +22,6 @@ public class OfficeSupplier {
      */
     
      public static String shredLastCharacter(String s) {
-        // TODO
-        // HINT https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#substring-int-
         
         String x = s.substring(0, s.length()-1);
 
@@ -47,7 +45,7 @@ public class OfficeSupplier {
      *   - ex: "Hey can I pull you for a cha?", 't' -> "Hey can I pull you for a chat?"
      */
     public static String stapleToEnd(String s, char c) {
-        // TODO
+
         return s + c;
     } // adds a character to the end of the phrase by using stapleToEnd to attach the letter __ to char to the string __
 }
