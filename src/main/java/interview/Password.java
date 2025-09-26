@@ -21,7 +21,38 @@ public class Password {
         // https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#charAt-int-
 
         Random random = new Random();
+        String letters = "abcdefghijklmnopqrstuvwxyz";
+        String digits = "0123456789";
+        String symbol = "!@#$%^&*";
+        String password = "";
 
-        return "";
+        int r = random.nextInt(letters.length());
+        password += letters.charAt(r);
+
+       //letters
+        r = random.nextInt(letters.length());
+        password += letters.charAt(r);
+        r = random.nextInt(letters.length());
+        password += letters.charAt(r);
+        r = random.nextInt(letters.length());
+        password += letters.charAt(r);
+        r = random.nextInt(letters.length());
+        password += letters.charAt(r);
+
+            //digits
+        r = random.nextInt(digits.length());
+        password += digits.charAt(r);
+        r = random.nextInt(digits.length());
+        password += digits.charAt(r);
+        r = random.nextInt(digits.length());
+        password += digits.charAt(r);
+        r = random.nextInt(digits.length());
+        password += digits.charAt(r);
+
+            //symbols
+        r = random.nextInt(symbol.length());
+        password += symbol.charAt(r);
+
+        return password;
     }
 }

@@ -20,19 +20,41 @@ public class PasswordTest {
         // HINT Java's Character class has rich support for classifying unicode symbols.
         // https://docs.oracle.com/javase/8/docs/api/java/lang/Character.html#isLetter-char-
         // https://docs.oracle.com/javase/8/docs/api/java/lang/Character.html#isDigit-char-
+       
+        String password = Password.generatePassword();
+        assert Character.isLetter(password.charAt(0));
+        assert Character.isLetter(password.charAt(1));
+        assert Character.isLetter(password.charAt(2));
+        assert Character.isLetter(password.charAt(3));
+        assert Character.isLetter(password.charAt(4));
+
+        assert Character.isDigit(password.charAt(5));
+        assert Character.isDigit(password.charAt(6));
+        assert Character.isDigit(password.charAt(7));
+        assert Character.isDigit(password.charAt(8));
+
+        assert !Character.isLetterOrDigit(password.charAt(9));
         assert true;
     }
 
     @Test
     public void testPasswordLength() {
         // TODO Ensure that generated password is of length 10.
-        assert true;
+       String password= Password.generatePassword();
+       int length = password.length();
+        assert length == 10;
+        assert true; 
     }
 
     @Test
     public void testPasswordUnique() {
         // TODO Create two passwords and ensure that they do not equal each other.
         // NOTE We overlook collisions for the purpose of this exercise.
+        String password1 = Password.generatePassword();
+        String password2 = Password.generatePassword();
+        if (password1.equals(password2)){
+            assert false;
+        } 
         assert true;
     }
 }

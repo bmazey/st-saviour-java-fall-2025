@@ -9,8 +9,17 @@ public class Estimator {
      *  - ex:  1.2 -> 1
      *  - ex: -3.6 -> -4
      */
+
     public static int round(double d) {
         // TODO
-        return 0;
+
+        double remainder = d-(int)d;
+           if (remainder >= 0.5) {
+                return (int)d + 1;
+           }
+           if (remainder <= -0.5){
+            return (int)d - 1;
+           }
+        return (int)d;
     }
 }
