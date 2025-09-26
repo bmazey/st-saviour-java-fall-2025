@@ -21,19 +21,19 @@ public class PasswordTest {
         // https://docs.oracle.com/javase/8/docs/api/java/lang/Character.html#isLetter-char-
         // https://docs.oracle.com/javase/8/docs/api/java/lang/Character.html#isDigit-char-
        
-        String password= Password.generatePassword();
-        assert Character.isLetter (password.charAt(0));
-        assert Character.isLetter (password.charAt(1));
-        assert Character.isLetter (password.charAt(2));
-        assert Character.isLetter (password.charAt(3));
-        assert Character.isLetter (password.charAt(4));
+        String password = Password.generatePassword();
+        assert Character.isLetter(password.charAt(0));
+        assert Character.isLetter(password.charAt(1));
+        assert Character.isLetter(password.charAt(2));
+        assert Character.isLetter(password.charAt(3));
+        assert Character.isLetter(password.charAt(4));
 
-        assert Character.isDigit (password.charAt(5));
-        assert Character.isDigit (password.charAt(6));
-        assert Character.isDigit (password.charAt(7));
-        assert Character.isDigit (password.charAt(8));
+        assert Character.isDigit(password.charAt(5));
+        assert Character.isDigit(password.charAt(6));
+        assert Character.isDigit(password.charAt(7));
+        assert Character.isDigit(password.charAt(8));
 
-        assert Character.isDefined (password.charAt(9));
+        assert !Character.isLetterOrDigit(password.charAt(9));
         assert true;
     }
 
@@ -54,8 +54,7 @@ public class PasswordTest {
         String password2 = Password.generatePassword();
         if (password1.equals(password2)){
             assert false;
-        }
-        
+        } 
         assert true;
     }
 }

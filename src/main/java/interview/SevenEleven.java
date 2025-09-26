@@ -21,9 +21,6 @@ public class SevenEleven {
         if (price % 11 == 0){
             return "eleven";
         }
-        
-
-        
         return "";
     }
 }

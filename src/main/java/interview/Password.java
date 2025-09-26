@@ -29,6 +29,7 @@ public class Password {
         int r = random.nextInt(letters.length());
         password += letters.charAt(r);
 
+       //letters
         r = random.nextInt(letters.length());
         password += letters.charAt(r);
         r = random.nextInt(letters.length());

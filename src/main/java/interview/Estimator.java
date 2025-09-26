@@ -14,11 +14,11 @@ public class Estimator {
         // TODO
 
         double remainder = d-(int)d;
-           if (remainder >=0.5) {
-                return (int)d+1;
+           if (remainder >= 0.5) {
+                return (int)d + 1;
            }
            if (remainder <= -0.5){
-            return (int)d-1;
+            return (int)d - 1;
            }
         return (int)d;
     }
