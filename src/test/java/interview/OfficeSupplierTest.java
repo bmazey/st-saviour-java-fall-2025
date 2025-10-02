@@ -3,9 +3,9 @@ package interview;
 import org.junit.jupiter.api.Test;
 
 public class OfficeSupplierTest {
-    
+
     @Test
-    public static void testOfficeShredder() {
+    public void testOfficeShredder() {
         assert OfficeSupplier.shredFirstCharacter("Michael").equals("ichael");
         assert OfficeSupplier.shredFirstCharacter("Pam").equals("am");
 
@@ -14,7 +14,7 @@ public class OfficeSupplierTest {
     }
 
     @Test
-    public static void testOfficeStapler() {
+    public void testOfficeStapler() {
         assert OfficeSupplier.stapleToBeginning("ngela", 'A').equals("Angela");
         assert OfficeSupplier.stapleToBeginning("tanley", 'S').equals("Stanley");
 

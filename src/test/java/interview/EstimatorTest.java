@@ -3,9 +3,9 @@ package interview;
 import org.junit.jupiter.api.Test;
 
 public class EstimatorTest {
-    
+
     @Test
-    public static void testRounding() {
+    public void testRounding() {
         // Should remain zero.
         assert Estimator.round(0.0) == 0;
         assert Estimator.round(0.2) == 0;
