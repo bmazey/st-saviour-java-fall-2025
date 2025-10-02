@@ -3,25 +3,31 @@ package interview;
 import java.util.Random;
 
 public class Password {
-
-    /*
-     * The generatePassword() method accepts no arguments and returns a String with the following characteristics:
-     *  - The first 5 characters are letters.
-     *  - The next 4 characters are digits.
-     *  - The final character is a symbol.
-     *  - The length of the String is 10. 
-     *  - It's relatively unlikely that two generated Strings are the same.
-     */
+// All of these comments are overstimming me (brocken heart emoji)
     public static String generatePassword() {
-        // TODO
-        // HINT You will have to use a bounded random number generator for this method.
-        // https://docs.oracle.com/javase/8/docs/api/java/util/Random.html#nextInt-int-
+    Random random = new Random();
+        //These are the letter characters for the str. 
+    String letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+        // SIXXXXX SEVENNN, These are the numbers for the password
+    String digits = "0123456789";
+    //Finally, these are the symbols  (these took way too long)
+    String symbols = "!@#$%^&*()-_+={}[]|;:,.<>?";
+    StringBuilder password = new StringBuilder();
 
-        // HINT Using the charAt() method is a great technique for pulling chars from a String.
-        // https://docs.oracle.com/javase/8/docs/api/java/lang/String.html#charAt-int-
-
-        Random random = new Random();
-
-        return "";
+// I have never watched so many CPS videos to understand a concept in my life
+    for(int i = 0; i < 4; i++) {
+        password.append(letters.charAt(random.nextInt(letters.length())));
     }
+
+    for (int i = 0; i < 4; i++) {
+        password.append(digits.charAt(random.nextInt(digits.length())));
+    }
+    password.append(symbols.charAt(random.nextInt(symbols.length())));
+    // My world is cru,bling as we speak /j
+    return password.toString();
+    }
+public static void main(String[] args) {
+    System.out.println(generatePassword());
 }
+}
+//IT WORKS!!! I AM A BOSS!!! #codingqueen 
