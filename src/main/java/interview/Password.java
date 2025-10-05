@@ -22,6 +22,24 @@ public class Password {
 
         Random random = new Random();
 
-        return "";
+        String letters = "abcdefghijklmnopqrstuvwxyz";
+        String digits = "0123456789";
+        String symbols = "!@#$%^&*";
+
+        String password = "";
+
+        // Now we pull a random character (letter)
+        int r = random.nextInt(letters.length());
+        password += letters.charAt(r);
+
+        r = random.nextInt(letters.length());
+        password += letters.charAt(r);
+
+        // ...
+
+        r = random.nextInt(digits.length());
+        password += digits.charAt(r);
+
+        return password;
     }
 }
