@@ -25,6 +25,8 @@ class Hello {
         System.out.println(System.identityHashCode(s));
         System.out.println(System.identityHashCode(c));
 
+        ystem.ouc.charAt(1)
+
         //strings are emutable
         //Even though the variables have different names they are pointing to the same value
         //Java does not create an entirely new memory address for c. 
