@@ -1,16 +1,18 @@
 package factor;
 
 import java.util.Arrays;
-// BACK IN THE SADDLE BABYYYYY
+
 public class Arrayer {
 
     // summation() accepts an array of integers and returns the sum of all numbers within.
     //      ex: [0, 2, -1, 15] -> 16
     public static int summation(int[] numbers) {
 
-        // TODO
-
-        return 0;
+        int sum = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            sum = sum+numbers[i];
+        }
+        return sum;
     }
 
     // findNegative() accepts an array of integers containing one negative number
@@ -19,7 +21,11 @@ public class Arrayer {
     //      ex: [11, 13, -1, 0, 9] -> 2
     public static int findNegative(int[] numbers) {
 
-        // TODO
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] < 0){
+                return i;
+            }
+        }
 
         return 0;
     }
@@ -29,7 +35,11 @@ public class Arrayer {
     //      ex: [11, 13, -1, 0, 9] -> 13
     public static int findGreatest(int[] numbers) {
 
-        // TODO
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] < 0){
+                return i;
+            }
+        }
 
         return 0;
     }
