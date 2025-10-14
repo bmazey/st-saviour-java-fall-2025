@@ -8,9 +8,11 @@ public class Arrayer {
     //      ex: [0, 2, -1, 15] -> 16
     public static int summation(int[] numbers) {
 
-        // TODO
-
-        return 0;
+        int result = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            result = result + numbers[i];
+        }
+        return result;
     }
 
     // findNegative() accepts an array of integers containing one negative number
@@ -18,10 +20,13 @@ public class Arrayer {
     // the provided array contains only a single negative number.
     //      ex: [11, 13, -1, 0, 9] -> 2
     public static int findNegative(int[] numbers) {
-
-        // TODO
-
-        return 0;
+        
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] < 0) {
+                return i;
+            }
+        }
+        return -1;
     }
 
     // findGreatest() accepts an array of integers and returns the greatest
@@ -29,9 +34,13 @@ public class Arrayer {
     //      ex: [11, 13, -1, 0, 9] -> 13
     public static int findGreatest(int[] numbers) {
 
-        // TODO
-
-        return 0;
+        int greatest = numbers[0];
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] > greatest) {
+                greatest = numbers[i];
+            }
+        }
+        return greatest;
     }
 
     // remove() accepts an array of integers and an int n. The method removes *all instances*
@@ -39,21 +48,27 @@ public class Arrayer {
     //      ex: [0, 1, 1, 2, 2, 3], n = 2 -> [0, 1, 1, 3]
     public static int[] remove(int[] numbers, int n) {
 
-        // TODO
-
-        return new int[0];
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] != n) {
+                return i;
+            }
+        }
+        return -1;
     }
+
 
     // roundUp() accepts an array of *non-negative* doubles and returns an array of
     // rounded integers. Doubles are rounded up when the decimal is >= 0.5.
     //      ex: [1.2, 3.5, 4.2, 0.0] -> [1, 4, 4, 0]
     public static int[] roundUp(double[] doubles) {
 
-        // TODO
-
-        return new int[0];
+         double remainder = i - int(i);
+        for (int i = 0; i < numbers.length; i++) {
+         } if (numbers[i] >= 0.5) {
+                return (int)d + 1;
+                return (int)d - 1; 
     }
-
+    }
     // evensOnly() accepts an array of integers and returns a new array containing
     // only the even numbers found in the provided array, in their original order.
     //      ex: [3, 4, 7, 8, 12] -> [4, 8, 12]
