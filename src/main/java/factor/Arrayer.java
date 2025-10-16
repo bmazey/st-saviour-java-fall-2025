@@ -8,9 +8,12 @@ public class Arrayer {
     //      ex: [0, 2, -1, 15] -> 16
     public static int summation(int[] numbers) {
 
-        // TODO
+        int result = 0;
+        for(int i = 0; i < numbers.length; i++) {
+            result += numbers[i];
+        }
 
-        return 0;
+        return result;
     }
 
     // findNegative() accepts an array of integers containing one negative number
