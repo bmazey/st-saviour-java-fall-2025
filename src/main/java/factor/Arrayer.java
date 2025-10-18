@@ -48,45 +48,78 @@ public class Arrayer {
     //      ex: [0, 1, 1, 2, 2, 3], n = 2 -> [0, 1, 1, 3]
     public static int[] remove(int[] numbers, int n) {
 
+        int count = 0;
+
         for (int i = 0; i < numbers.length; i++) {
             if (numbers[i] != n) {
-                return i;
+                count++;
             }
         }
-        return -1;
-    }
 
+        int[] result = new int[count];
+        int position = 0;
+
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] != n) {
+                result[position] = numbers[i];
+                position++;
+            }
+        }
+
+        return result;
+    }
 
     // roundUp() accepts an array of *non-negative* doubles and returns an array of
     // rounded integers. Doubles are rounded up when the decimal is >= 0.5.
     //      ex: [1.2, 3.5, 4.2, 0.0] -> [1, 4, 4, 0]
     public static int[] roundUp(double[] doubles) {
 
-         double remainder = i - int(i);
-        for (int i = 0; i < numbers.length; i++) {
-         } if (numbers[i] >= 0.5) {
-                return (int)d + 1;
-                return (int)d - 1; 
+         int[] result = new int[doubles.length];
+
+        for (int i = 0; i < doubles.length; i++) {
+         if (doubles[i] - (int) doubles[i] >= 0.5) {
+                result[i] = (int) doubles[i] + 1; 
+          } else { 
+            result[i] = (int) doubles[i]; 
+          }
+        }
+        return result; 
     }
-    }
+    
     // evensOnly() accepts an array of integers and returns a new array containing
     // only the even numbers found in the provided array, in their original order.
     //      ex: [3, 4, 7, 8, 12] -> [4, 8, 12]
     public static int[] evensOnly(int[] numbers) {
 
-        // TODO
+        int count = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] % 2 == 0) {
+                count++;
+            }
+        }
+        int[] evens = new int[count];
+        int position = 0;
 
-        return new int[0];
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] % 2 == 0) {
+                evens[position] = numbers[i];
+                position++;
+            }
+        }
+        return evens;
     }
-
     // lastOfFourDigits() accepts an array of four-digit integers and returns a new
     // array containing only the last digit of each number in the original sequence.
     //      ex: [1004, 1112, 5667, 8009] -> [4, 2, 7, 9]
     public static int[] lastOfFourDigits(int[] numbers) {
 
-        // TODO
+        int[] lastDigits = new int[numbers.length];
 
-        return new int[0];
+        for (int i = 0; i < numbers.length; i++) {
+            lastDigits[i] = numbers[i] % 10;
+        }
+
+        return lastDigits;
     }
 
     // merge() accepts two *pre-sorted* arrays of integers and returns a new *sorted* array.
@@ -94,9 +127,29 @@ public class Arrayer {
     //      ex: [0, 2, 4, 8] + [1, 3, 5] -> [0, 1, 2, 3, 4, 5, 8]
     public static int[] merge(int[] first, int[] second) {
 
-        // TODO +5 Bonus
-        // HINT: use Arrays.sort()
+        int[] result = new int[first.length + second.length];
+        int i = 0; int j = 0; int k = 0;
 
-        return new int[0];
-    }
-}
+        while (i < first.length && j < second.length) {
+            if (first[i] < second[j]) {
+                result[k] = first[i];
+                i++; 
+            } else if (first[k] > second[j]) {
+                j++;
+            } else {
+                k++;
+            }
+
+            while (i < first.length) {
+                result[k] = first[i];
+                i++;
+                k++;
+            }
+
+            while (j < second.length) { 
+                result[k] = second[j];
+                j++;
+                k++;
+            }
+                return result;
+        }
