@@ -35,13 +35,15 @@ public class Arrayer {
     //      ex: [11, 13, -1, 0, 9] -> 13
     public static int findGreatest(int[] numbers) {
 
-        for (int i = 0; i < numbers.length; i++) {
-            if (numbers[i] < 0){
-                return i;
+    int greatest = numbers[0];
+
+        for (int i = 1; i < numbers.length; i++) {
+            if (numbers[i] > greatest){
+                greatest = numbers[i];
             }
         }
 
-        return 0;
+        return greatest;
     }
 
     // remove() accepts an array of integers and an int n. The method removes *all instances*
@@ -49,9 +51,25 @@ public class Arrayer {
     //      ex: [0, 1, 1, 2, 2, 3], n = 2 -> [0, 1, 1, 3]
     public static int[] remove(int[] numbers, int n) {
 
-        // TODO
+        int numberCount = 0;
 
-        return new int[0];
+        for (int i = 0; i < numbers.length; i++){
+            if (numbers[i] != n) {
+                numberCount++;
+            }
+        }
+
+        int[] result = new int[numberCount];
+        int numPos = 0;
+
+        for (int i = 0; i < numbers.length; i++){
+            if (numbers[i] != n) {
+                result[numPos] = numbers[i];
+                numPos++;
+
+            }
+        }
+        return result;
     }
 
     // roundUp() accepts an array of *non-negative* doubles and returns an array of
@@ -70,6 +88,10 @@ public class Arrayer {
     public static int[] evensOnly(int[] numbers) {
 
         // TODO
+
+        for (int i = 0; i < numbers.length; i++){
+            
+        }
 
         return new int[0];
     }
