@@ -128,28 +128,8 @@ public class Arrayer {
     public static int[] merge(int[] first, int[] second) {
 
         int[] result = new int[first.length + second.length];
-        int i = 0; int j = 0; int k = 0;
 
-        while (i < first.length && j < second.length) {
-            if (first[i] < second[j]) {
-                result[k] = first[i];
-                i++; 
-            } else if (first[k] > second[j]) {
-                j++;
-            } else {
-                k++;
-            }
+        return new int[0];
 
-            while (i < first.length) {
-                result[k] = first[i];
-                i++;
-                k++;
-            }
-
-            while (j < second.length) { 
-                result[k] = second[j];
-                j++;
-                k++;
-            }
-                return result;
-        }
+    }
+}
