@@ -97,11 +97,13 @@ public class Arrayer {
         int count = 0;
         for (int i = 0; i < doubles.length; i++) {
             int num = (int)doubles[i];
-            if (doubles[i]-num >= 0.5){
-                int newnum = num +
+            if (doubles[i] - num >= 0.5){
+                doubles[i] = num + 1;
+            
                 count ++;
             }
             else {
+                doubles[i] = num;
                 count ++;
             }
         }   
@@ -110,11 +112,14 @@ public class Arrayer {
         for (int i = 0; i < doubles.length; i++){
             int num = (int)doubles[i];
             if (doubles[i]- num >= 0.5){
-                //dawg idk
-                position ++;
+           // doubles[i] = num + 1;
+           int num2 = num + 1;
+            result [position] = num2;
+                position++;
             }
             else {
-                //help me please
+                doubles[i] = num;
+                result[position] = num;
                 position ++;
             }
         }
