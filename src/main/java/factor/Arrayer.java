@@ -9,8 +9,12 @@ public class Arrayer {
     public static int summation(int[] numbers) {
 
         // TODO
+        int sum = 0;
+        for(int i = 0; i < numbers.length; i++){ // adds whatever content is at this current postion to the resut variable and at the end, return the result.
+            sum = sum + numbers[i];
+        }
 
-        return 0;
+        return sum;
     }
 
     // findNegative() accepts an array of integers containing one negative number
@@ -19,8 +23,12 @@ public class Arrayer {
     //      ex: [11, 13, -1, 0, 9] -> 2
     public static int findNegative(int[] numbers) {
 
-        // TODO
-
+        for(int i = 0; i < numbers.length; i++) {
+	        if (numbers[i] < 0) { // if the number were on is less than zero than its a negative number and returns the position that the negative number was found.)
+	            return i;
+            }
+        }
+        
         return 0;
     }
 
@@ -30,8 +38,13 @@ public class Arrayer {
     public static int findGreatest(int[] numbers) {
 
         // TODO
-
-        return 0;
+        int greatest = numbers[0]; 
+        for(int i = 1; i < numbers.length; i++) {
+            if(numbers[i] > greatest) {
+                greatest = numbers[i];
+            }
+        }
+        return greatest;
     }
 
     // remove() accepts an array of integers and an int n. The method removes *all instances*
@@ -39,9 +52,23 @@ public class Arrayer {
     //      ex: [0, 1, 1, 2, 2, 3], n = 2 -> [0, 1, 1, 3]
     public static int[] remove(int[] numbers, int n) {
 
-        // TODO
+        int count = 0;
+        for(int i = 0; i < numbers.length; i++) {
+            if(numbers[i] == n) {
+                count++;
+            }
+        }
 
-        return new int[0];
+        int[] result = new int[count];
+
+        int position = 0;
+        for(int i = 0; i < numbers.length; i++) {
+            if(numbers[i] != n) {
+                result[position] = numbers[i];
+            }
+        }
+
+        return result;
     }
 
     // roundUp() accepts an array of *non-negative* doubles and returns an array of
@@ -50,6 +77,7 @@ public class Arrayer {
     public static int[] roundUp(double[] doubles) {
 
         // TODO
+
 
         return new int[0];
     }
@@ -60,6 +88,11 @@ public class Arrayer {
     public static int[] evensOnly(int[] numbers) {
 
         // TODO
+        int count = 0; 
+        for (int i = 0; i < numbers.length; i++) {
+            
+        }
+
 
         return new int[0];
     }
