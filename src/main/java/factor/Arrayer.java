@@ -77,10 +77,19 @@ public class Arrayer {
     public static int[] roundUp(double[] doubles) {
 
         // TODO
-
-
-        return new int[0];
+        int (results = new int [double.length]);
+        for (int i = 0; i < double.length; i++) {
+            int num = (int) double[i];
+            if (doubles[i] - num >= 0.5) {
+                result[i] = num + 1; 
+        }
+        else {
+            result[i] = num;
+        }
     }
+     return new int[0];
+    }
+    
 
     // evensOnly() accepts an array of integers and returns a new array containing
     // only the even numbers found in the provided array, in their original order.
@@ -90,12 +99,24 @@ public class Arrayer {
         // TODO
         int count = 0; 
         for (int i = 0; i < numbers.length; i++) {
-            
+            for (int n: numbers) {
+                if (n % 2 ==0) {
+                    count++;
+                }
+            }
+        // Create a new array and use the correct sizing
+        int[] evens = new int[count];
+
+        int index = 0;
+        for (int n : numbers) {
+            if (n % 2 == 0) {
+                evens[index] = n;
+                index++;
+            }
+
         }
+        return evens;
 
-
-        return new int[0];
-    }
 
     // lastOfFourDigits() accepts an array of four-digit integers and returns a new
     // array containing only the last digit of each number in the original sequence.
@@ -103,8 +124,15 @@ public class Arrayer {
     public static int[] lastOfFourDigits(int[] numbers) {
 
         // TODO
+        int[] lastDigits = new int[numbers.length];
 
-        return new int[0];
+        // Extract the last digit of each number 
+        for (int i = 0; i < numbers.length; i++) {
+            lastDigits[i] = numbers[i] % 10; 
+        // Gives the last digit 
+        }
+
+        return lastDigits;
     }
 
     // merge() accepts two *pre-sorted* arrays of integers and returns a new *sorted* array.
