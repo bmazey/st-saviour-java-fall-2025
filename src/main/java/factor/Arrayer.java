@@ -53,18 +53,19 @@ public class Arrayer {
     public static int[] remove(int[] numbers, int n) {
 
         int count = 0;
-        for(int i = 0; i < numbers.length; i++) {
-            if(numbers[i] == n) {
+        for (int num : numbers) {
+            if (num != n) { 
                 count++;
             }
         }
-
+        // Create a new array of the appropriate size
         int[] result = new int[count];
+        int index = 0;
 
-        int position = 0;
-        for(int i = 0; i < numbers.length; i++) {
-            if(numbers[i] != n) {
-                result[position] = numbers[i];
+        // Copy all elements that are not equal to n
+        for ( int num : numbers) {
+            if (num != n) {
+                result[index++] = num;
             }
         }
 
@@ -77,17 +78,17 @@ public class Arrayer {
     public static int[] roundUp(double[] doubles) {
 
         // TODO
-        int (results = new int [double.length]);
-        for (int i = 0; i < double.length; i++) {
-            int num = (int) double[i];
+        int[] results = new int [doubles.length];
+        for (int i = 0; i < doubles.length; i++) {
+            int num = (int) doubles[i];
             if (doubles[i] - num >= 0.5) {
-                result[i] = num + 1; 
+                results[i] = num + 1; 
         }
         else {
-            result[i] = num;
+            results[i] = num;
         }
     }
-     return new int[0];
+     return results;
     }
     
 
@@ -97,25 +98,27 @@ public class Arrayer {
     public static int[] evensOnly(int[] numbers) {
 
         // TODO
+        // First, count how many even numbers there are
         int count = 0; 
-        for (int i = 0; i < numbers.length; i++) {
-            for (int n: numbers) {
-                if (n % 2 ==0) {
-                    count++;
+        for (int n : numbers) {
+            if (n % 2 == 0) {
+                count++;
                 }
             }
         // Create a new array and use the correct sizing
         int[] evens = new int[count];
-
         int index = 0;
-        for (int n : numbers) {
-            if (n % 2 == 0) {
-                evens[index] = n;
-                index++;
-            }
 
+        // Fill the new array with even numbers
+        for (int num : numbers) {
+            if (num % 2 == 0) {
+                evens[index++] = num;
+            }
         }
+
         return evens;
+
+    }
 
 
     // lastOfFourDigits() accepts an array of four-digit integers and returns a new
@@ -139,9 +142,12 @@ public class Arrayer {
     // WARNING do not assume arrays are of equal length!
     //      ex: [0, 2, 4, 8] + [1, 3, 5] -> [0, 1, 2, 3, 4, 5, 8]
     public static int[] merge(int[] first, int[] second) {
+        int[] result = new int[first.length + second.length];
+        int i = 0, a = 0, b = 0; 
 
-        // TODO +5 Bonus
-        // HINT: use Arrays.sort()
+        
+
+
 
         return new int[0];
     }
