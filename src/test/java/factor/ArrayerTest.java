@@ -84,7 +84,7 @@ public class ArrayerTest {
         assert result.length == 4; 
     }
 
-       @Test
+    @Test
     public void testMerge() {
         // TODO +5 Bonus
         // Create two arrays, invoke Arrayer.merge()
