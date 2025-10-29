@@ -9,8 +9,11 @@ public class Arrayer {
     public static int summation(int[] numbers) {
 
         int sum = 0;
+        // int is created to remember the sum
         for(int i = 0; i < numbers.length; i++) {
             sum += numbers[i];
+            //make a loop that starts at 0, equal to the length of the array (prevent errors)
+            // increment by 1
         }
 
         return sum;
@@ -75,7 +78,7 @@ public class Arrayer {
     public static int[] roundUp(double[] doubles) {
 
         int[] result = new int[doubles.length];
-        for(int i = 0; i < numbers.length; i++) {
+        for(int i = 0; i < doubles.length; i++) {
             int num = (int)doubles[i];
             if (doubles[i] - num >= 0.5){
                 result[i] = num + 1;
@@ -84,8 +87,7 @@ public class Arrayer {
                 result[i] = num;
             }
         }
-
-        return new int[0];
+        return result;
     }
 
     // evensOnly() accepts an array of integers and returns a new array containing
