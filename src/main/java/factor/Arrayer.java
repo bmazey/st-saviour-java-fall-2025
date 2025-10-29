@@ -22,7 +22,11 @@ public class Arrayer {
     //      ex: [11, 13, -1, 0, 9] -> 2
     public static int findNegative(int[] numbers) {
 
-        // TODO
+        for(int i = 0; i < numbers.length; i++) {
+            if(numbers[i] < 0) {
+                return i;
+            }
+        }
 
         return 0;
     }
