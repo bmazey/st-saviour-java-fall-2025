@@ -36,9 +36,14 @@ public class Arrayer {
     //      ex: [11, 13, -1, 0, 9] -> 13
     public static int findGreatest(int[] numbers) {
 
-        // TODO
+        int greatest = numbers[0];
+        for(int i = 0; i < numbers.length; i++) {
+            if(numbers[i] = greatest) {
+                greatest = numbers[i];
+            }
+        }
 
-        return 0;
+        return greatest;
     }
 
     // remove() accepts an array of integers and an int n. The method removes *all instances*
@@ -46,9 +51,22 @@ public class Arrayer {
     //      ex: [0, 1, 1, 2, 2, 3], n = 2 -> [0, 1, 1, 3]
     public static int[] remove(int[] numbers, int n) {
 
-        // TODO
+        int count = 0;
+        for(int i = 0; i < numbers.length; i++) {
+            if(numbers[i] != n) {
+                count++;
+            }
+        }
+        int[] result = new int[count];
+        int position = 0;
+        for(int i = 0; i < numbers.length; i++) {
+            if(numbers[i] != n)  {
+                result[position] = numbers[i];
+                position++;
+            }
+        }
 
-        return new int[0];
+        return result;
     }
 
     // roundUp() accepts an array of *non-negative* doubles and returns an array of
@@ -56,7 +74,16 @@ public class Arrayer {
     //      ex: [1.2, 3.5, 4.2, 0.0] -> [1, 4, 4, 0]
     public static int[] roundUp(double[] doubles) {
 
-        // TODO
+        int[] result = new int[doubles.length];
+        for(int i = 0; i < numbers.length; i++) {
+            int num = (int)doubles[i];
+            if (doubles[i] - num >= 0.5){
+                result[i] = num + 1;
+            }
+            else {
+                result[i] = num;
+            }
+        }
 
         return new int[0];
     }
