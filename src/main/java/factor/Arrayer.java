@@ -115,9 +115,9 @@ public class Arrayer {
     //      ex: [0, 2, 4, 8] + [1, 3, 5] -> [0, 1, 2, 3, 4, 5, 8]
     public static int[] merge(int[] first, int[] second) {
 
-        // TODO +5 Bonus
-        // HINT: use Arrays.sort()
-
-        return new int[0];
+        int[] result = new int(first.length + second.length);
+        System.arraycopy(first, 0, result, 0, first.length);
+        System.arraycopy(second, 0, result, first.length, second.length);
+        return result;
     }
 }
