@@ -105,9 +105,12 @@ public class Arrayer {
     //      ex: [1004, 1112, 5667, 8009] -> [4, 2, 7, 9]
     public static int[] lastOfFourDigits(int[] numbers) {
 
-        // TODO
+        int[] result = new int[numbers.length];
+        for(int i = 0; i < numbers.length; i++) {
+            result[i] = numbers[i] % 10;
+        }
 
-        return new int[0];
+        return result;
     }
 
     // merge() accepts two *pre-sorted* arrays of integers and returns a new *sorted* array.
