@@ -95,9 +95,22 @@ public class Arrayer {
     //      ex: [3, 4, 7, 8, 12] -> [4, 8, 12]
     public static int[] evensOnly(int[] numbers) {
 
-        // TODO
+        int count = 0;
+        for(int i = 0; i < numbers.length; i++) {
+            if(numbers[i] % 2 == 0) {
+                count++;
+            }
+        }
+        int position = 0;
+        int result[] = new int[count];
+        for(int i = 0; i < numbers.length; i++) {
+            if(numbers[i] % 2 == 0) {
+                result[position] = numbers[i];
+                position++;
+            }
+        }
 
-        return new int[0];
+        return result;
     }
 
     // lastOfFourDigits() accepts an array of four-digit integers and returns a new
