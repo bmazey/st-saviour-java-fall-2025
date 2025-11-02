@@ -93,9 +93,11 @@ public class Arrayer {
             int num = (int)doubles[i];
             if (doubles[i] - num >= 0.5){
                 result[i] = num + 1;
+                // if the double integer is greater than or equal to 0.5, the integer of the double value will increase by 1
             }
             else {
                 result[i] = num;
+                // if the double integer is less than 0.5, then the result is the integer of the double value by itself
             }
         }
         return result;
@@ -153,8 +155,11 @@ public class Arrayer {
     //      ex: [0, 2, 4, 8] + [1, 3, 5] -> [0, 1, 2, 3, 4, 5, 8]
     public static int[] merge(int[] first, int[] second) {
         int[] result = new int[first.length + second.length];
+        // the result is the length of the first and the second arrays combined
         System.arraycopy(first, 0, result, 0, first.length);
+        // first is the first array, starting at index 0, being copied into the new array, also starting from 0
         System.arraycopy(second, 0, result, first.length, second.length);
+        // second is the second array, starting at index 0, being copied into the new array, starting from after the elements from the first array copied into this array
         Arrays.sort(result);
         // this command sorts the digits in the new array into order
         return result;
