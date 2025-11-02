@@ -13,6 +13,7 @@ public class Arrayer {
             sum += numbers[i];
             //make a loop that starts at 0, equal to the length of the array (prevent errors)
             // increment by 1
+            // the sum of all the numbers in order by position (0, 1, 2...) are added and the sum is given as the result
         }
         return sum;
     }
@@ -69,6 +70,8 @@ public class Arrayer {
         int position = 0;
         // keeps track of the postiions of each number
         for(int i = 0; i < numbers.length; i++) {
+            //make a loop that starts at 0, equal to the length of the array (prevent errors)
+            // increment by 1
             if(numbers[i] != n)  {
                 // this line makes sure that none of the integers in the new array equal 2
                 result[position] = numbers[i];
@@ -135,6 +138,8 @@ public class Arrayer {
         int[] result = new int[numbers.length];
         //  makes the new array equal to the inital array
         for(int i = 0; i < numbers.length; i++) {
+            //make a loop that starts at 0, equal to the length of the array (prevent errors)
+            // increment by 1
             result[i] = numbers[i] % 10;
         }
         // make a loop that starts at 0, equal to the length of the array (prevent errors)
