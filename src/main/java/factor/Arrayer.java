@@ -40,9 +40,12 @@ public class Arrayer {
     public static int findGreatest(int[] numbers) {
 
         int greatest = numbers[0];
+        // new array starts at 0
         for(int i = 0; i < numbers.length; i++) {
             if(numbers[i] > greatest) {
                 greatest = numbers[i];
+                // the new array will take the numbers at each position and compare it with the previous numbe
+                // if that number is greater, itll be compared with the next number until all the numbers in the array are compared
             }
         }
 
@@ -119,10 +122,13 @@ public class Arrayer {
     public static int[] lastOfFourDigits(int[] numbers) {
 
         int[] result = new int[numbers.length];
+        //  makes the new array equal to the inital array
         for(int i = 0; i < numbers.length; i++) {
             result[i] = numbers[i] % 10;
         }
-
+        // make a loop that starts at 0, equal to the length of the array (prevent errors)
+        // increment by 1
+        // % 10 takes away the tens of each digit, leaving the last digit in the new array
         return result;
     }
 
@@ -135,6 +141,7 @@ public class Arrayer {
         System.arraycopy(first, 0, result, 0, first.length);
         System.arraycopy(second, 0, result, first.length, second.length);
         Arrays.sort(result);
+        // this command sorts the digits in the new array into order
         return result;
     }
 }
