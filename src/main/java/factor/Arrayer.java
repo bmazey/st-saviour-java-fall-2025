@@ -26,7 +26,10 @@ public class Arrayer {
     public static int findNegative(int[] numbers) {
 
         for(int i = 0; i < numbers.length; i++) {
+            //make a loop that starts at 0, equal to the length of the array (prevent errors)
+            // increment by 1
             if(numbers[i] < 0) {
+                // if the number in any of the positions is less than 0, that number will be printed as a result
                 return i;
             }
         }
@@ -42,6 +45,8 @@ public class Arrayer {
         int greatest = numbers[0];
         // new array starts at 0
         for(int i = 0; i < numbers.length; i++) {
+            //make a loop that starts at 0, equal to the length of the array (prevent errors)
+            // increment by 1
             if(numbers[i] > greatest) {
                 greatest = numbers[i];
                 // the new array will take the numbers at each position and compare it with the previous numbe
@@ -59,16 +64,22 @@ public class Arrayer {
 
         int count = 0;
         for(int i = 0; i < numbers.length; i++) {
+            //make a loop that starts at 0, equal to the length of the array (prevent errors)
+            // increment by 1
             if(numbers[i] != n) {
                 count++;
+                // if the number in the array is not equal to 2, then it will count as one for the new array
             }
         }
         int[] result = new int[count];
+        // the length of the new result is equal to the number of integers in the new array
         int position = 0;
         for(int i = 0; i < numbers.length; i++) {
             if(numbers[i] != n)  {
+                // this line makes sure that none of the integers in the new array equal 2
                 result[position] = numbers[i];
                 position++;
+                // this increases the position by 1, making the new array without n (or 2) included
             }
         }
 
@@ -82,6 +93,8 @@ public class Arrayer {
 
         int[] result = new int[doubles.length];
         for(int i = 0; i < doubles.length; i++) {
+            //make a loop that starts at 0, equal to the length of the array (prevent errors)
+            // increment by 1
             int num = (int)doubles[i];
             if (doubles[i] - num >= 0.5){
                 result[i] = num + 1;
@@ -100,6 +113,8 @@ public class Arrayer {
 
         int count = 0;
         for(int i = 0; i < numbers.length; i++) {
+            //make a loop that starts at 0, equal to the length of the array (prevent errors)
+            // increment by 1
             if(numbers[i] % 2 == 0) {
                 count++;
             }
