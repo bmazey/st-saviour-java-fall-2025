@@ -8,9 +8,11 @@ public class Arrayer {
     //      ex: [0, 2, -1, 15] -> 16
     public static int summation(int[] numbers) {
 
-        // TODO
-
-        return 0;
+        int result = 0;
+        for(int i = 0; i < numbers.length; i++) { // initializer, condition, terminating condition
+            result += numbers[i]; // adds elements to total
+        }
+        return result;
     }
 
     // findNegative() accepts an array of integers containing one negative number
@@ -19,9 +21,13 @@ public class Arrayer {
     //      ex: [11, 13, -1, 0, 9] -> 2
     public static int findNegative(int[] numbers) {
 
-        // TODO
+        for(int i = 0; i < numbers.length; i++) { 
+            if(numbers[i] < 0){ // finds the negative number
+                return i; // returns index of number
+            }
+        }
 
-        return 0;
+        return -1;
     }
 
     // findGreatest() accepts an array of integers and returns the greatest
@@ -29,9 +35,14 @@ public class Arrayer {
     //      ex: [11, 13, -1, 0, 9] -> 13
     public static int findGreatest(int[] numbers) {
 
-        // TODO
-
-        return 0;
+        int greatest = numbers[0]; //assumes first number is the greatest
+        for(int i = 1; i < numbers.length; i++){
+        // if a number is bigger than the current greatest it makes it the greatest
+            if(numbers[i] > greatest) {  
+                greatest = numbers[i]; 
+            }
+        }
+        return greatest; 
     }
 
     // remove() accepts an array of integers and an int n. The method removes *all instances*
@@ -39,9 +50,21 @@ public class Arrayer {
     //      ex: [0, 1, 1, 2, 2, 3], n = 2 -> [0, 1, 1, 3]
     public static int[] remove(int[] numbers, int n) {
 
-        // TODO
-
-        return new int[0];
+        int KeepCount = 0;
+        for (int i = 0; i < numbers.length; i++) {
+            if (numbers[i] != n) {
+                KeepCount++;
+            }
+        }
+        int[] result = new int[KeepCount];
+        int write = 0; 
+        for(int i = 0; i < numbers.length; i++){
+            if (numbers[i] != n) {
+                result[write] = numbers[i];
+                write++;
+            }
+        }
+        return result;
     }
 
     // roundUp() accepts an array of *non-negative* doubles and returns an array of
@@ -49,19 +72,37 @@ public class Arrayer {
     //      ex: [1.2, 3.5, 4.2, 0.0] -> [1, 4, 4, 0]
     public static int[] roundUp(double[] doubles) {
 
-        // TODO
-
-        return new int[0];
-    }
+        int[] result = new int[doubles.length];
+        for (int i = 0; i < doubles.length; i++) {
+            if (doubles[i] - (int)doubles[i] >= 0.5) {
+                result[i] = (int)doubles[i] + 1; } 
+            else {
+                result[i] = (int)doubles[i];
+            }
+        }
+    return result;
+}
 
     // evensOnly() accepts an array of integers and returns a new array containing
     // only the even numbers found in the provided array, in their original order.
     //      ex: [3, 4, 7, 8, 12] -> [4, 8, 12]
     public static int[] evensOnly(int[] numbers) {
 
-        // TODO
-
-        return new int[0];
+       int count = 0;
+        for (int i = 0; i < numbers.length; i++) {
+        if (numbers[i] % 2 == 0) {
+        count++;
+            }
+        }
+       int[] result = new int[count];
+        int index = 0;
+        for (int i = 0; i < numbers.length; i++) {
+        if (numbers[i] % 2 == 0) {
+        result[index] = numbers[i];
+        index++;
+            }
+        }
+        return result;
     }
 
     // lastOfFourDigits() accepts an array of four-digit integers and returns a new
@@ -69,9 +110,11 @@ public class Arrayer {
     //      ex: [1004, 1112, 5667, 8009] -> [4, 2, 7, 9]
     public static int[] lastOfFourDigits(int[] numbers) {
 
-        // TODO
-
-        return new int[0];
+        int[] result = new int[numbers.length];
+        for (int i = 0; i < numbers.length; i++) {
+        result[i] = numbers[i] % 10; // gets last digit
+            }
+        return result;
     }
 
     // merge() accepts two *pre-sorted* arrays of integers and returns a new *sorted* array.
@@ -79,9 +122,17 @@ public class Arrayer {
     //      ex: [0, 2, 4, 8] + [1, 3, 5] -> [0, 1, 2, 3, 4, 5, 8]
     public static int[] merge(int[] first, int[] second) {
 
-        // TODO +5 Bonus
-        // HINT: use Arrays.sort()
-
-        return new int[0];
+       int[] merge = new int[first.length + second.length];
+       int a = 0;
+        for (int i = 0; i < first.length; i++) {
+        merge[a] = first[i];
+        a++;
+        }
+        for (int i = 0; i < second.length; i++) {
+        merge[a] = second[i];
+        a++;
+        }
+        Arrays.sort(merge);
+        return merge;
     }
 }
