@@ -6,6 +6,11 @@ class Hello {
 
         for(int i = 0; i < numbers.length; i++) { //we stop when i= numbers.length
             System.out.println("position: " + i + " content: " + numbers [i]); 
-    }
+        
+        }
 
-}
+    } 
+
+} 
+
+// i is a variable thats keeping track of the position and number.i access the content 
